@@ -1,2 +1,2 @@
-# Bsides Cincy CTF 17
+# Bsides Cincy CTF 
 Repository of challenges
