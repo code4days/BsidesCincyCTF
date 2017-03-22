@@ -1,0 +1,16 @@
+
+Trivia Questions - BSides Cincy CTF
+
+Please include answer with question
+
+These don't necessarily need to be *ctf* related - anything IT/security/cyberpunk, old skool hacking, etc will do. No lower/upper limit on difficulty. 
+
+Open-ended questions get preference, followed by multiple choice.
+By nature, I'd like to stray from T/F questions. If you have a T/F type question, just throw in a couple reasonable answers to make it multiple choice instead.
+
+Questions: 
+
+	1. What *NIX command has the most command line switches? Answer: lsof
+	
+	2. In the Matrix Reloaded, what service does Trinity exploit? Answer: ssh
+		2.1 Bonus: What does the vulnerability exploit? Answer: integer overflow in SSHv1 CRC32 /// Official title: SSH CRC-32 Compensation Attack Detector Vulnerability

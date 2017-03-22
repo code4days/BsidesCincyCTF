@@ -1,0 +1,41 @@
+
+Files used: BSides_Logo.png
+
+=====================================================================================================		
+
+Challenge Decription: User is presented a pcap with hints of a photo. Can't immediately extract PNG. Must find PNG magic bytes, reconstruct PNG with hex editor.
+
+HINT: Web server accessed over port 764, "PNG" on phone dial
+HINT: Magic bytes = "OBF", simple left-shift from "PNG"
+
+
+=====================================================================================================		
+
+Process to create PNG with data inside
+
+	Set "signature" attribute as B64 encoded string. Use "flag" in the attribute as hint
+
+		# convert clean_logo.png -set signature flag=e2ZsYWd9PVlvdXJlQ2xvc2VWaWV3VGhlUGljCg== BSides_Logo.png
+	
+=====================================================================================================		
+		
+To find find flag
+
+	1. strings BSides_Logo.png
+	
+		1.1 stdout: e2ZsYWd9PVlvdXJlQ2xvc2VWaWV3VGhlUGljCg==
+		
+	2. echo "e2ZsYWd9PVlvdXJlQ2xvc2VWaWV3VGhlUGljCg==" | base64 -d
+	
+		2.1 stdout: {flag}=YoureCloseViewThePic
+	
+	3. Edit magic bytes in pcap to reconstruct PNG 
+	
+		3.1 Right click packet #85, "Export packet bytes", save file. In hex editor, change "OBF" to "PNG". View image.
+	
+	4. Flag is in textbox inside image (visible)
+	
+	5. Flag = RowDaBoat513!
+	
+	
+=====================================================================================================		

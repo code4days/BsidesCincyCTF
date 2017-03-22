@@ -1,0 +1,49 @@
+
+Files used: BSides_Logo.png
+
+=====================================================================================================		
+
+Challenge Decription: User is presented a pcap with hints of a photo. Can't immediately extract PNG. Must find PNG magic bytes, reconstruct PNG with hex editor and/or script to combine various tcp streams. See Notes below. 
+
+HINT: Web server accessed over port 764, "PNG" on phone dial
+HINT: Magic bytes = "OBF", simple left-shift from "PNG"
+
+
+=====================================================================================================		
+
+Process to create PNG with data inside
+
+	Set "signature" attribute as B64 encoded string. Use "flag" in the attribute as hint
+
+		# convert clean_logo.png -set signature flag=e2ZsYWd9PVlvdXJlQ2xvc2VWaWV3VGhlUGljCg== BSides_Logo.png
+	
+=====================================================================================================		
+		
+To find find flag
+
+	1. strings BSides_Logo.png
+	
+		1.1 stdout: e2ZsYWd9PVlvdXJlQ2xvc2VWaWV3VGhlUGljCg==
+		
+	2. echo "e2ZsYWd9PVlvdXJlQ2xvc2VWaWV3VGhlUGljCg==" | base64 -d
+	
+		2.1 stdout: {flag}=YoureCloseViewThePic
+	
+	3. Edit magic bytes in pcap to reconstruct PNG - Not tested, see Note below
+	
+	4. Flag is in textbox inside image (visible)
+	
+	5. Flag = Row
+	
+	
+=====================================================================================================		
+
+
+Notes
+
+As a result of manually editing the pcap, I boinked a couple of things libpcap (Wireshark) uses to calculate sequence numbers/checsksums, which has caused the PNG file to be split into multiple streams. 
+
+
+The solution to this challenge will almost certainly involve either using scapy or tcpdump to extract data from tcp packets.
+	* Scapy script would read in pcap, for each tcp.packet, read tcp.data, write data to file. 
+	* Tcpdump command would probably use snaplen to grab up to X bytes in each tcp packet and rewrite to new file

@@ -1,0 +1,19 @@
+vm currently not included
+
+creds:
+	bsidescincy:bsidescincy
+
+
+
+* Vulnerable lfi php code included
+
+* make ssh attempt with username as flag (eg. ssh 'flag=513nicejob!'@host)
+
+flag = 513nicejob!
+	
+	
+	
+	
+	groupadd http-web
+	useradd -d /var/www -g http-web -s /bin/nologin http-web
+	chown http-web /var/log/auth.log
