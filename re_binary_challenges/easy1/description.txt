@@ -1,0 +1,1 @@
+This is an easy RE challenge. The password required by the binary and the flag are both stored as plaintext strings. These can be parsed easily by any disassembler or the Linux 'strings' command.
