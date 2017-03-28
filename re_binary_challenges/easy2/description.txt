@@ -1,0 +1,1 @@
+Very similar to the first challenge, but the flag and password are stored as 32bit strings. Still readable with basic disassembly/strings given the correct options.
