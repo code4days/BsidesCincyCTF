@@ -1,0 +1,1 @@
+This is a mid-tier RE challenge. The code contains an XOR encrypted string that was encrypted using the key CVGcvg. The idea is to either identify the XOR key in the code and use that to decode the message or RE the encryption method through debugging. When the plaintext is decoded to ExclusivelyForYou and passed as an argument, the binary prints the flag flag{ExclusivelyForYou}.
