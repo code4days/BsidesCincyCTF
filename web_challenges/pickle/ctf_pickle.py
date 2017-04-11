@@ -20,8 +20,8 @@ def index():
             return "Flag{pickles_are_great}"
 
     resp = make_response("Welcome to my site,"
-    "sorry it's still under construction..."
-    "admins only")
+    " sorry it's still under construction..."
+    " admins only")
     resp.set_cookie('greenPickle', encoded_cookie)
     return resp
 
