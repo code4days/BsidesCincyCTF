@@ -1,9 +1,0 @@
-Recon [Arbitrary 100 points]
-https://open.spotify.com/user/1236209359/playlist/6QubHO2qEtpl3g4riIGqMc
-Hint: Club President Matt Sepela
-
-Solution:
-1. Visit the Spotify Link, notice the first character of each song: CCCMYSPACE
-2. Understand what the hint means, google Club President Matt, realize that the club is named cybercrime cats
-3. CCC stands for cybercrime cats, google myspace cybercrime cats
-4. Find myspace page and the flag
