@@ -1,1 +1,10 @@
-picture of falgs
+picture of a flag
+the flag is Flag{Thatwasalotofwork3452}
+
+
+
+open the picture in a hex editor 
+extract the hidden zip file located at the end of the hex (ether go by ending hex values or search for 7z
+extract the two items in the zip folder from the flag picture 
+open the key picture to get the password to the second zip folder 
+open the second folder and access the txt file with the flag 
