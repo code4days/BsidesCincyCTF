@@ -1,3 +1,4 @@
 anBla3tpcmdzaG1ya19td19ndmN0eHNfdm1rbHh9
 
 So this is a somewhat basic double encoding challenge. The first step is the string is base64 encoded. Once decoded you get the string: jpek{irgshmrk_mw_gvctxs_vmklx} . This is encoded with the Affine Cipher (hence the 'A really FINE flag' title) using the values a=1 and b=4 I don't plan to give the values because there are online tools to easily bruteforce those values. Once decoded using that cipher, you get the flag flag{encoding_is_crypto_right}.
+
