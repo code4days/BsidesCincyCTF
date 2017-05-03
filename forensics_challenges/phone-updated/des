@@ -1,0 +1,14 @@
+here is the updated version of the phone challenge
+
+the flag is flag{email23sdaf3223e2}
+
+solve
+1. get .ab to tar file 
+2. open tar file and see two folders apps and shared
+    shared has a hit file in it 
+    apps is the file you need to go into 
+3. find and go into the folder com.samsung.android.email.provider
+4. go into db folder 
+5.open the EmailProviderBody.db
+6. see the flag but it is in 64 bit encoding 
+7.decode the 64bit and profit 
